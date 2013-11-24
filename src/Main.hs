@@ -1,8 +1,14 @@
--- | Main entry point to the application.
 module Main where
 
--- | The main entry point.
+import Parser
+import Typechecker
+
 main :: IO ()
-main = do
-    putStrLn "Welcome to FP Haskell Center!"
-    putStrLn "Have a good day!"
+main =
+    process "mapfold"
+    --line <- getLine
+    --process line
+  where process = print .
+                  typecheck .
+                  addPrelude .
+                  parse

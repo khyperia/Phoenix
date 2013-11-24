@@ -4,8 +4,19 @@ module-template: ! 'module MODULE_NAME where
 extensions: {}
 environment: ghc-7.4.2-stable-13.09
 cabal-file: project.cabal
+hidden-packages: ''
 modules:
+  PhoenixPrelude:
+    filename: src/PhoenixPrelude.hs
+  Ast:
+    filename: src/Ast.hs
+  Parser:
+    filename: src/Parser.hs
+  Typechecker:
+    filename: src/Typechecker.hs
   Main(src/Main.hs):
     filename: src/Main.hs
 version: 1
-ghc-args: []
+extra-packages: ''
+ghc-args:
+- -Wall

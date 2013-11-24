@@ -1,0 +1,17 @@
+;
+add = #add;
+
+id x = x;
+const x y = x;
+
+data List 1 = Cons 1 (List 1) | Empty;
+
+map f = _List (\x xs -> Cons (f x) (map f xs)) Empty;
+foldr f v = _List (\x xs -> f x (foldr f v xs)) v;
+foldl f v = _List (\x xs -> foldl f (f v x) xs) v;
+length = _List (\x xs -> add 1 (length xs)) 0;
+mapfold f = foldr (\x xs -> Cons (f x) xs) [];
+
+data Unit = Unit;
+data Tuple2 1 2 = Tuple2 1 2;
+data Tuple3 1 2 3 = Tuple3 1 2 3;
