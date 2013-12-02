@@ -1,0 +1,15 @@
+name:                Phoenix
+version:             0.1.0.0
+synopsis:            A toy functional language
+description:         A small functional language, made by khyperia, that uses GHC as a backend.
+author:              khyperia
+maintainer:          khyperia@live.com
+category:            Compiler
+build-type:          Simple
+cabal-version:       >=1.8
+
+executable Phoenix
+  main-is:             Main.hs
+  -- other-modules:       
+  build-depends:       base, mtl, containers, file-embed, bytestring, parsec
+  hs-source-dirs:      src
