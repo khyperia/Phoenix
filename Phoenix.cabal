@@ -10,6 +10,6 @@ cabal-version:       >=1.8
 
 executable Phoenix
   main-is:             Main.hs
-  -- other-modules:       
   build-depends:       base, mtl, containers, file-embed, bytestring, parsec
   hs-source-dirs:      src
+  ghc-options:         -Wall -O2

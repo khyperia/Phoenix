@@ -6,4 +6,3 @@ import Data.ByteString.Char8
 
 prelude :: String
 prelude = unpack $(embedFile "src/prelude.txt")
-
